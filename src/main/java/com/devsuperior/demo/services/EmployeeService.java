@@ -7,7 +7,9 @@ import com.devsuperior.demo.repositories.EmployeeRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Transactional
 @Service
 public class EmployeeService {
 
@@ -33,8 +35,6 @@ public class EmployeeService {
     private void  copyDtoToEntity(EmployeeDTO dto, Employee employee) {
         employee.setName(dto.getName());
         employee.setEmail(dto.getEmail());
-        Department department = new Department();
-        department.setId(dto.getDepartmentId());
-        employee.setDepartment(department);
+        employee.setDepartment(new Department(dto.getDepartmentId(), null));
     }
 }
