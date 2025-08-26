@@ -1,7 +1,6 @@
 package com.devsuperior.demo.controller;
 
 import com.devsuperior.demo.dto.DepartmentDTO;
-import com.devsuperior.demo.entities.Department;
 import com.devsuperior.demo.services.DepartmentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

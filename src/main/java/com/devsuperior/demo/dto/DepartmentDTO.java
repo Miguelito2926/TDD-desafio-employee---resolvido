@@ -1,7 +1,6 @@
 package com.devsuperior.demo.dto;
 
 import com.devsuperior.demo.entities.Department;
-import com.devsuperior.demo.entities.Employee;
 
 public class DepartmentDTO {
 
